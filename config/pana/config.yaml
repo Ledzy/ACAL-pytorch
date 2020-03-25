@@ -1,0 +1,37 @@
+ngf: 64
+ndf: 64
+input_nc: 3
+output_nc: 3
+g_model: "resnet_9blocks"
+d_model: "n_layers"
+gpu_ids: 0
+dpc: 3
+project_name: "acal_pana"
+
+num_epoch: 1000
+pre_epoch: 20
+resolution: 224
+batch_size: 4
+pre_batch_size: 64
+num_workers: 2
+lr: 0.0002
+alpha: 1
+beta: 1
+num_k: 1
+
+pretrain: False
+resume: False
+mode: "classify"
+few_shot: True
+use_label: False
+minibatch_d: False
+
+data: "original"
+source_name: "source"
+target_name: "target"
+n_class: 65
+idt_loss: False
+recon_loss: False
+
+csv_path: ./csv/pana65
+model_path: ./result/2020_2_21_5_55_21

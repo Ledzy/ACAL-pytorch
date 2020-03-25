@@ -1,0 +1,36 @@
+ngf: 64
+ndf: 64
+s_input_nc: 3
+t_input_nc: 1
+g_model: "resnet_9blocks"
+d_model: "n_layers"
+gpu_ids: 0
+dpc: 3
+project_name: "digit_ft"
+
+num_epoch: 1000
+pre_epoch: 50
+resolution: 32
+batch_size: 128
+pre_batch_size: 512
+num_workers: 2
+pre_lr: 0.002
+lr: 0.0002
+alpha: 1
+beta: 3
+num_k: 1
+pre_optimizer: Adam
+
+pretrain: False
+resume: False
+mode: "finetune"
+few_shot: True
+use_label: False
+minibatch_d: True
+
+data: "digit"
+n_class: 10
+idt_loss: False
+recon_loss: False
+
+model_path: ./result/2020_2_21_5_55_21

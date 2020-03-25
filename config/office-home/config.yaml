@@ -1,0 +1,36 @@
+ngf: 64
+ndf: 64
+input_nc: 3
+output_nc: 3
+g_model: "resnet_9blocks"
+d_model: "n_layers"
+gpu_ids: 0
+dpc: 3
+
+num_epoch: 1000
+pre_epoch: 20
+resolution: 224
+batch_size: 4
+pre_batch_size: 64
+num_workers: 2
+lr: 0.0002
+alpha: 1
+beta: 1
+num_k: 1
+
+pretrain: False
+resume: False
+mode: "reconstruct"
+few_shot: False
+use_label: False
+minibatch_d: False
+
+data: "original"
+source_name: Product
+target_name: "RealWorld"
+n_class: 65
+idt_loss: True
+recon_loss: False
+
+csv_path: ./csv/csv65
+model_path: ./result/2020_2_21_5_55_21
