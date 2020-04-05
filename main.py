@@ -55,8 +55,8 @@ class ACAL(object):
 
         # optimizers
         self.g_optimizer = torch.optim.Adam(itertools.chain(self.Gst.parameters(), self.Gts.parameters(), 
-        self.Cs.parameters(), self.Ct.parameters()), lr=args.lr, betas=(0.5, 0.999))
-        self.d_optimizer = torch.optim.Adam(itertools.chain(self.Ds.parameters(), self.Dt.parameters()), lr=args.lr, betas=(0.5, 0.999))
+        self.Cs.parameters(), self.Ct.parameters()), lr=args.lr_g, betas=(0.5, 0.999))
+        self.d_optimizer = torch.optim.Adam(itertools.chain(self.Ds.parameters(), self.Dt.parameters()), lr=args.lr_d, betas=(0.5, 0.999))
         if args.pre_optimizer == "Adam":
             self.cs_optimizer = torch.optim.Adam(self.Cs.parameters(), lr=args.pre_lr, betas=(0.5, 0.999))
         elif args.pre_optimizer == "sgd":

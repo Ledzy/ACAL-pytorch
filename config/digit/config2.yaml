@@ -8,17 +8,18 @@ gpu_ids: 0
 dpc: 3
 project_name: "acal"
 
-num_epoch: 1000
+num_epoch: 500
 pre_epoch: 50
 resolution: 32
 batch_size: 128
 pre_batch_size: 512
 num_workers: 2
 pre_lr: 0.002
-lr: 0.0002
+lr_g: 0.0002
+lr_d: 0.002
 alpha: 1
-beta: 3
-num_k: 3
+beta: 1
+num_k: 1
 pre_optimizer: Adam
 
 pretrain: False 

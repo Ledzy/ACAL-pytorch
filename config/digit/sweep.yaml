@@ -1,14 +1,14 @@
 program: train.py
 method: bayes
 metric:
-  name: t_val_acc
+  name: Ct_val_acc
   goal: maximize
 parameters:
   cfg:
-    values: ["./config/digit/config.yaml"]
-  pre_batch_size:
-    min: 32
-    max: 256
-  pre_lr:
-    min: 0.0001
-    max: 0.002
+    values: ["./config/digit/config2.yaml"]
+  lr_g:
+    min: 0.0005
+    max: 0.05
+  lr_d:
+    min: 0.0005
+    max: 0.05

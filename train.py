@@ -11,6 +11,8 @@ def get_args():
     parser.add_argument('--cfg', type=str)
     parser.add_argument("--pre_batch_size", type=int, default=0)
     parser.add_argument("--pre_lr", type=float, default=0)
+    parser.add_argument("--lr_g", type=float, default=0)
+    parser.add_argument("--lr_d", type=float, default=0)
     parser.add_argument("--optimizer", type=str, default=None)
     
     return parser.parse_args()
@@ -30,6 +32,10 @@ def main():
         args.pre_batch_size = argparse.pre_batch_size
     if argparse.pre_lr > 0:
         args.pre_lr = argparse.pre_lr
+    if argparse.lr_g > 0:
+        args.lr_g = argparse.lr_g
+    if argparse.lr_d > 0:
+        args.lr_d = argparse.lr_d
     if argparse.optimizer:
         args.optimizer = argparse.optimizer
 
