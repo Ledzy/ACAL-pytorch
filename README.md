@@ -20,4 +20,4 @@ python train.py ./config/digit/config.yaml
 
 # result
 We treat few shot adaptation setting from SVHN to MNIST.   
-By exploiting wandb sweeping tool, we recoreded 80.5% accuracy on target domain while the paper reported to be about 84%.   
+By exploiting wandb sweeping tool, we recoreded 80.5% accuracy on target domain while the paper reported to be about 84%. When 3 samples per class are given in target domain.   
